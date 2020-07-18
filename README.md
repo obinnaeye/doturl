@@ -4,6 +4,8 @@
 ```
 docker-compose up
 ```
+Check http://localhost:3001/ for the backend (REST API)
+Check http://localhost:8081/ for the app UI
 
 ### Unit testing
 Grab container (frontend or backend) id by running `docker ps`. Then:

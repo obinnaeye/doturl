@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 const express = require("express")
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Controller = require('./controllers/Controller')
+import Controller from './controllers/Controller';
 
 var DATABASE_URL: String = process.env.DATABASE_URL || 'http://localhost'
 mongoose.set('useUnifiedTopology', true);

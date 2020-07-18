@@ -8,6 +8,8 @@ services:
       - "8081:8081"
     volumes:
       - ./client/src:/app/src
+      - ./client/tests:/app/tests
+      - ./client/coverage:/client/coverage
     links:
       - api
   api:
@@ -18,6 +20,8 @@ services:
         - "3001:3001"
     volumes:
       - ./api/src:/app/src
+      - ./api/tests:/app/tests
+      - ./api/coverage:/app/coverage
     depends_on: 
       - mongo
     environment:

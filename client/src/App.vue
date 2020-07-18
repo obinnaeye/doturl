@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <UrlShortener v-on:new-url="onNewUrl"></UrlShortener>
+    <UrlShortener v-on:newUrl="onNewUrl"></UrlShortener>
     <h4>List of shortened urls</h4>
     <ul>
       <li v-for="url in urls" :key="url.shortUrl">
@@ -26,7 +26,6 @@ import ShortUrls from './api/ShortUrls';
 
 export default class App extends Vue {
   private urls: Array<string> = []
-  private shortUrl = ''
 
   public onNewUrl(url: string): void {
     this.urls.push(url)
@@ -35,7 +34,6 @@ export default class App extends Vue {
   beforeCreate() {
     ShortUrls.getUrls()
       .then(data => {
-        console.log(data.urls)
         this.urls = data.urls
       })
   }

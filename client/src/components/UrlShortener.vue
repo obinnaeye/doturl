@@ -13,7 +13,6 @@ import Alert from './Alert'
 export default {
     data: () => {
         return {
-            urls: [],
             url: ''
         }
     },
@@ -27,9 +26,8 @@ export default {
             ShortUrls.shortenUrl(url)
                 .then(data => {
                     this.url = data.url.shortUrl
-                    console.log(`this is ${this.url}`)
-                    if (data.status == 200) {
-                        this.$emit('new-url', data.url)
+                    if (data.status === 200) {
+                        this.$emit('newUrl', data.url)
                     }
                 })
         }

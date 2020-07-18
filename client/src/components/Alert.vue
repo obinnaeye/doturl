@@ -8,7 +8,6 @@
     </div>
 </template>
 <script>
-import copy from "../helpers/copy";
 export default {
     name: 'Alert',
     props: {
@@ -17,7 +16,9 @@ export default {
     methods: {
         copyUrl() {
             const ref = this.$refs.generated_url;
-            copy(ref)
+            ref.select();
+            ref.setSelectionRange(0, 99999)
+            document.execCommand("copy");
         },
     }
 }

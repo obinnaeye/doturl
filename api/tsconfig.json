@@ -1,9 +1,18 @@
 {
     "compilerOptions": {
-      "rootDir": "src",
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
       "outDir": "build",
       "types": ["node"],
     },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.vue",
+      "tests/**/*.ts",
+      "tests/**/*.tsx"
+    ],
     "exclude":[
       "node_modules",
       "build"

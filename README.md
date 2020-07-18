@@ -14,3 +14,8 @@ npm test
 
 ### Develop
 Simply start making your changes on the file and the changes will be automatically updated in docker. 
+
+
+### TODO
+1. Add .evn file to configure ports and some other variables
+2. Abstract test helpers

@@ -28,12 +28,28 @@ export default {
 .url {
     text-align: left;
     width: 70%;
-    padding: 0.1% 2%
+    padding: 0.1% 2%;
 
 }
 .date {
     width: 30%;
     text-align: left;
-    padding: 0.1% 2%
+    padding: 0.1% 2%;
+}
+@media (max-width:760px){
+    .date, .url {
+        width: 100%;
+        padding-left: 5%
+    }
+    .short-url {
+        flex-direction: column
+    }
+
+}
+@media (max-width:950px){
+    .date, .url {
+        width: 50%;
+    }
+
 }
 </style>

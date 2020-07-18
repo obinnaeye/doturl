@@ -65,7 +65,7 @@ li:last-child > div {
 }
 .div-70 {
     width: 70%;
-    height: 30px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,5 +77,23 @@ input {
 button {
     width: 20%;
     padding: 0 2%
+}
+
+@media (max-width:760px) {
+  .div-70 {
+    flex-direction: column;
+    justify-content:right;
+    height: 100px;
+  }
+  input {
+    width: 100%;
+    height: 50px;
+  }
+  button {
+    width: 50%;
+    height: 50px;
+    align-self: center;
+    margin-top: 10px
+  }
 }
 </style>

@@ -2,23 +2,15 @@
 
 ## Project setup
 ```
-npm install
+docker-compose up
 ```
 
-### Compiles and hot-reloads for development
+### Unit testing
+Grab container (frontend or backend) id by running `docker ps`. Then:
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+docker exec -ti <CONTAINER-ID> bash
+npm test
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Develop
+Simply start making your changes on the file and the changes will be automatically updated in docker. 

@@ -1,7 +1,7 @@
 {
   "name": "doturl-api",
   "version": "1.0.0",
-  "main": "build/app.js",
+  "main": "build/src/app.js",
   "private": true,
   "scripts": {
     "start": "tsc --watch & nodemon build/src/app.js",
